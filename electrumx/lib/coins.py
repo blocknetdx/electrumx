@@ -4242,7 +4242,11 @@ class BlocknetMixin(object):
 class Blocknet(BlocknetMixin, Coin):
     NAME = "Blocknet"
     SHORTNAME = "BLOCK"
-
+    PEERS = [
+        'electrumx-001.blocknet.mywire.org s50002 t50001',
+        'electrumx-002.blocknet.mywire.org s50002 t50001',
+        'blocknet-electrumx001.airdns.org s55741 t55740'
+    ]
     @classmethod
     def header_hash(cls, header):
         version, = util.unpack_le_uint32_from(header)
